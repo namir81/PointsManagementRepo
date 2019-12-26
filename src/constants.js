@@ -1,1 +1,1 @@
-export const ADD_REWARD = 'ADD_REWARD';
+export const SET_REWARDS = 'SET_REWARDS';

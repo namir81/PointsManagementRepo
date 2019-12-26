@@ -1,10 +1,9 @@
-import { ADD_REWARD } from '../constants';
+import { SET_REWARDS } from '../constants';
 
-export function addReward(rewardName, points) {
+export function setRewards(rewards) {
     const action = {
-        type: ADD_REWARD,
-        rewardName,
-        points
+        type: SET_REWARDS,
+        rewards,
     }
 
     return action;

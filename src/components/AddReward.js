@@ -6,7 +6,7 @@ import { bindActionCreators } from 'redux';
 
 import { firebaseApp } from '../firebase';
 import { rewardsRef } from '../firebase'; 
-import  { addReward} from '../actions';
+//import  { addReward} from '../actions';
 
 class AddReward extends Component {
 
@@ -27,7 +27,7 @@ class AddReward extends Component {
     addReward() {
         const { rewardName, points } = this.state;
         console.log(`addReward ${rewardName} ${points} `);
-        this.props.addReward(rewardName, points);
+       // this.props.addReward(rewardName, points);
         rewardsRef.push({rewardName, points})        
     }
 
@@ -61,11 +61,11 @@ function mapStateToProps(state) {
     }
 }
 
-function mapDispatchToProps(dispatch) {
-    return bindActionCreators({addReward}, dispatch);
-}
+//function mapDispatchToProps(dispatch) {
+  //  return bindActionCreators({addReward}, dispatch);
+//}
 
 
 
-export default connect(mapStateToProps, mapDispatchToProps) (AddReward);
+export default connect(mapStateToProps, null) (AddReward);
 
